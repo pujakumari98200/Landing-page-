@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Creative Landing Page</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #333;
+  }
+
+  header {
+    background: #0D3B66;
+    color: white;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #F4D35E;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(120deg, #F4D35E 0%, #EE964B 100%);
+    color: #0D3B66;
+    padding: 100px 20px 80px;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .btn-primary {
+    background: #0D3B66;
+    color: white;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(13, 59, 102, 0.4);
+    transition: background 0.3s ease;
+  }
+  .btn-primary:hover {
+    background: #07324a;
+  }
+
+  /* Features Section */
+  .features {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  .feature-box {
+    background: white;
+    flex: 1 1 280px;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+  }
+  .feature-box:hover {
+    box-shadow: 0 15px 30px rgb(0 0 0 / 0.15);
+  }
+  .feature-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #F4D35E;
+  }
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #0D3B66;
+  }
+  .feature-desc {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Content Section */
+  .content-section {
+    background: #091A2C;
+    color: white;
+    padding: 60px 20px;
+  }
+  .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .content-box {
+    background: #16335B;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .content-box:hover {
+    transform: translateY(-10px);
+  }
+  .content-box h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  .content-box p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #d9d9d9;
+  }
+
+  /* Footer */
+  footer {
+    background: #0D3B66;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .features {
+      flex-direction: column;
+    }
+    .feature-box {
+      max-width: 100%;
+    }
+    .hero h2 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1>LandingPro</h1>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Your Creative Landing Page</h2>
+    <p>Learn, build, and shine with a modern, responsive landing page designed to showcase your web development skills.</p>
+    <button class="btn-primary" onclick="alert('Thanks for clicking! Start building your awesome site now!')">Get Started</button>
+  </section>
+
+  <section id="features" class="features" aria-label="Features Section">
+    <div class="feature-box">
+      <div class="feature-icon">🚀</div>
+      <h3 class="feature-title">Fast Performance</h3>
+      <p class="feature-desc">Experience lightning-fast page loads and seamless navigation, optimized for all devices.</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">🎨</div>
+      <h3 class="feature-title">Creative Design</h3>
+      <p class="feature-desc">Unleash your creativity with vibrant colors, intuitive layouts, and elegant typography.</p>
+    </div>
+    <div class="feature-box">
+      <div class="feature-icon">⚙️</div>
+      <h3 class="feature-title">Easy Customization</h3>
+      <p class="feature-desc">Modify and style every element effortlessly to create truly unique user experiences.</p>
+    </div>
+  </section>
+
+  <section id="about" class="content-section" aria-label="About Section">
+    <div class="content-container">
+      <div class="content-box">
+        <h3>What You Will Learn</h3>
+        <p>Understand the fundamentals of HTML and CSS, including layout techniques, responsive design, and best practices.</p>
+      </div>
+      <div class="content-box">
+        <h3>Build Your Portfolio</h3>
+        <p>Create a stunning landing page project that demonstrates your skills to potential employers or clients.</p>
+      </div>
+      <div class="content-box">
+        <h3>Grow Your Confidence</h3>
+        <p>Gain practical development experience while enhancing your creativity and problem-solving abilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" aria-label="Footer Section">
+    <p>Contact us: info@landingpro.com | © 2024 LandingPro. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
